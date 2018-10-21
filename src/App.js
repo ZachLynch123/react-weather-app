@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import key from './key';
+import Current from './Current';
+import Daily from './Daily';
 
 
 class App extends Component {
@@ -11,15 +14,15 @@ class App extends Component {
     }
   }
 
+   
 
 componentDidMount() {
-  fetch('https://api.darksky.net/forecast/2cd94b53ee1806c983d10d877b5c94bd/37.8267,-122.4233', {
+  fetch('https://api.darksky.net/forecast/' + key + '/36.0069352,-115.1530633', {
     mode: 'cors',
     headers: {"Access-Control-Allow-Origin": true}
   })
   .then(res => res.json())
   .then(json => {
-    console.log(json);
     this.setState({
       isLoaded: true,
       weatherData: json,
@@ -37,7 +40,8 @@ componentDidMount() {
     } else {
     return (
       <div className="App">
-        <p>timezone is {weatherData.timezone}</p>
+        <p>{weatherData.timezone}</p>
+        <Current data={weatherData}/>
       </div>
     );
   }
