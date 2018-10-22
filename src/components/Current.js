@@ -10,8 +10,7 @@ const current = (props) => {
                 <h1 className="City">Vegas i guess</h1>
             </div>
             <div className="content">
-                <div className="cloud"></div>
-                <div className="sun"></div>
+                <div className={props.data.currently.icon}></div>
                 <div class="degrees">
                     <h1 id="temp">{Math.floor(props.data.currently.temperature) + '\u00b0F'}</h1>
                 </div>

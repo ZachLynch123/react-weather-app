@@ -88,17 +88,19 @@ p { margin: 1.375rem 0; }
 }
 .cloud:nth-child(2):after { background: #fff; }
 
-.sun {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2.5em;
-  height: 2.5em;
-  margin: -1.25em;
-  background: currentColor;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.375em #fff;
-  animation: spin 12s infinite linear;
+.clear-day {
+  display:inline-block;
+  border-radius:50%;
+  height:100px;
+  width:100px;
+  background:orange;
+  box-shadow: 0 0 1px 0,
+                0 0 0px 0,
+                0 0 0px yellow,
+                inset 0 0 0px yellow;
+  z-index:12;
+  align-self: auto;
+  z-index:-99;
 }
 .rays {
   position: absolute;

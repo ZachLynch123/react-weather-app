@@ -8,6 +8,7 @@ const daily = (props) => {
         <div className="daily-container">
         <div className="seven-day">
             <h1>{Math.floor(props.day.apparentTemperatureHigh)}</h1>
+            <div className={props.day.icon}></div>
             <h1>{Math.floor(props.day.apparentTemperatureLow)}</h1>
         </div>
         </div>
