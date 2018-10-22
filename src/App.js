@@ -42,6 +42,10 @@ componentDidMount() {
       <div className="App">
         <p>{weatherData.timezone}</p>
         <Current data={weatherData}/>
+        {/* try a div inside a li to display 7 day. passing daily weather data in a for loop where i  is the day? */}
+        <div className="daily-container">
+          
+        </div>
       </div>
     );
   }

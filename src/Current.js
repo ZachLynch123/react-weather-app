@@ -15,7 +15,7 @@ const current = (props) => {
                     <h1 id="temp">{props.data.currently.temperature}</h1>
                     <span>&#176</span>
                 </div>
-                <h3 id="desc">not sunny</h3>
+                <h3 id="desc">{props.data.currently.summary}</h3>
             </div>
         </div>
     );
