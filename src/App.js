@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import key from './key';
-import Current from './Current';
-import Daily from './Daily';
+import Current from './components/Current';
+import Daily from './components/Daily';
 
 
-class App extends Component {
+class App extends Component { 
 
   constructor(props) {
     super(props);
@@ -14,22 +14,22 @@ class App extends Component {
     }
   }
 
-   
 
-componentDidMount() {
-  fetch('https://api.darksky.net/forecast/' + key + '/36.0069352,-115.1530633', {
-    mode: 'cors',
-    headers: {"Access-Control-Allow-Origin": true}
-  })
-  .then(res => res.json())
-  .then(json => {
-    this.setState({
-      isLoaded: true,
-      weatherData: json,
+  componentDidMount() {
+    fetch('https://api.darksky.net/forecast/' + key + '/36.0069352,-115.1530633', {
+      mode: 'cors',
+      headers: {"Access-Control-Allow-Origin": true}
     })
-  });
+    .then(res => res.json())
+    .then(json => {
+      this.setState({
+        isLoaded: true,
+        weatherData: json,
+      })
+    });
+  }
 
-}
+
 
   render() {
 
@@ -44,12 +44,17 @@ componentDidMount() {
         <Current data={weatherData}/>
         {/* try a div inside a li to display 7 day. passing daily weather data in a for loop where i  is the day? */}
         <div className="daily-container">
-          
+            <Daily day={weatherData.daily.data[0]} />
+            <Daily day={weatherData.daily.data[1]} />
+            <Daily day={weatherData.daily.data[2]} />
+            <Daily day={weatherData.daily.data[3]} />
+            <Daily day={weatherData.daily.data[4]} />
+            <Daily day={weatherData.daily.data[5]} />
+            <Daily day={weatherData.daily.data[6]} />
         </div>
       </div>
-    );
+    );}
   }
-}
 }
 
 export default App;

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CSS/Current.css';
 
 const current = (props) => {
     console.log(props);
@@ -6,16 +7,15 @@ const current = (props) => {
     return (
         <div className="current-container">
             <div>
-                <h2 className="City">Vegas i guess</h2>
+                <h1 className="City">Vegas i guess</h1>
             </div>
             <div className="content">
                 <div className="cloud"></div>
-                <div className="cloud"></div>
+                <div className="sun"></div>
                 <div class="degrees">
-                    <h1 id="temp">{props.data.currently.temperature}</h1>
-                    <span>&#176</span>
+                    <h1 id="temp">{Math.floor(props.data.currently.temperature) + '\u00b0F'}</h1>
                 </div>
-                <h3 id="desc">{props.data.currently.summary}</h3>
+                <h1 id="desc">{props.data.currently.summary}</h1>
             </div>
         </div>
     );

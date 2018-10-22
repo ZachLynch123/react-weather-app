@@ -1,0 +1,5 @@
+.daily-container {
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+  }
