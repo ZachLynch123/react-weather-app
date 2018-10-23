@@ -6,6 +6,11 @@
     grid-template-rows:20% 80%;
     text-align: center;
     padding: 25px 5px;
+    background-color: #fff;
+    filter: blur(1px);
+    opacity: 0.5;
+    background-image: url(https://assets.simpleviewcms.com/simpleview/image/upload/c_fill,h_900,q_75,w_1600/v1/clients/lasvegas/strip3_d7b175ef-3642-41a4-9dad-33b9be2b00a9.jpg);
+    background-repeat: no-repeat;
 }
 
 html { box-sizing: border-box; }
