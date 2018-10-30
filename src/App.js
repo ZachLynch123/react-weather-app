@@ -40,9 +40,9 @@ class App extends Component {
     } else {
     return (
       <div className="App">
-        <p>{weatherData.timezone}</p>
-        <Current data={weatherData}/>
-        {/* try a div inside a li to display 7 day. passing daily weather data in a for loop where i  is the day? */}
+      <div className="container">
+        {<Current data={weatherData}/>
+        /* try a div inside a li to display 7 day. passing daily weather data in a for loop where i  is the day? }
         <div className="daily-container">
             <Daily day={weatherData.daily.data[0]} />
             <Daily day={weatherData.daily.data[1]} />
@@ -52,6 +52,8 @@ class App extends Component {
             <Daily day={weatherData.daily.data[5]} />
             <Daily day={weatherData.daily.data[6]} />
         </div>
+      </div>*/}
+      </div>
       </div>
     );}
   }
