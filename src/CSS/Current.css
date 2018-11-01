@@ -8,11 +8,16 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  border: 2px solid blue;
 }
 
 .current-container {
   margin-top: -20%;
   border: 1px solid black
 }
+
+/*.daily-container {
+  border: 1px solid red;
+} */
 
 

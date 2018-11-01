@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import key from './key';
 import Current from './components/Current';
 import Daily from './components/Daily';
+import Test from './components/test';
 
 
 class App extends Component { 
@@ -42,7 +43,7 @@ class App extends Component {
       <div className="App">
       <div className="container">
         {<Current data={weatherData}/>
-        /* try a div inside a li to display 7 day. passing daily weather data in a for loop where i  is the day? }
+        /* try a div inside a li to display 7 day. passing daily weather data in a for loop where i  is the day? */}
         <div className="daily-container">
             <Daily day={weatherData.daily.data[0]} />
             <Daily day={weatherData.daily.data[1]} />
@@ -51,8 +52,9 @@ class App extends Component {
             <Daily day={weatherData.daily.data[4]} />
             <Daily day={weatherData.daily.data[5]} />
             <Daily day={weatherData.daily.data[6]} />
-        </div>
-      </div>*/}
+            }
+            </div>
+            <Test></Test>
       </div>
       </div>
     );}

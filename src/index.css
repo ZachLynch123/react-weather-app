@@ -7,7 +7,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(http://www.whatshallirender.com/wp-content/uploads/2015/10/fall-tree.jpg);
+  background: url(https://ae01.alicdn.com/kf/HTB1wrE9JFXXXXaWXXXXq6xXFXXXF/226077377/HTB1wrE9JFXXXXaWXXXXq6xXFXXXF.jpg)
+  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
 
 }
 
