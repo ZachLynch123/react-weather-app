@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import key from './key';
 import Current from './components/Current';
 import Daily from './components/Daily';
-import Test from './components/test';
 
 
 class App extends Component { 
@@ -52,9 +51,7 @@ class App extends Component {
             <Daily day={weatherData.daily.data[4]} />
             <Daily day={weatherData.daily.data[5]} />
             <Daily day={weatherData.daily.data[6]} />
-            }
             </div>
-            <Test></Test>
       </div>
       </div>
     );}
