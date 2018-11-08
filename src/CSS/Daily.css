@@ -9,7 +9,6 @@
   }
 
 .seven-day {
-  border: 1px solid green;
   flex-direction: column;
   max-width: 10%;
   flex-shrink: inherit;
@@ -17,7 +16,7 @@
   text-align: center;
   align-items: center;
   justify-content: space-between;
-  padding-left: 20px;
+  padding-left: 60px;
 }
 
 .wi {

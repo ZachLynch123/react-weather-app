@@ -13,7 +13,7 @@ const current = (props) => {
     return (
         <div className="current-container">
             <div>
-                <h1 className="City">Vegas i guess</h1>
+                <h1 className="City">Las Vegas</h1>
             </div>
             <div className="content">
                 <div class="degrees">
