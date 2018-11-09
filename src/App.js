@@ -17,7 +17,10 @@ class App extends Component {
 
 
   componentDidMount() {
-    fetch('https://api.darksky.net/forecast/' + key + '/36.0069352,-115.1530633', {
+    this.latitude = this.props.location.latitude;
+    this.longitude = this.props.location.longitude;
+
+    fetch('https://api.darksky.net/forecast/' + key + '/' + this.latitude + ',' + this.longitude, {
       mode: 'cors',
       headers: {"Access-Control-Allow-Origin": true}
     })
@@ -32,13 +35,13 @@ class App extends Component {
 
 
   render() {
-    
     let { isLoaded, weatherData } = this.state;
 
     if (!isLoaded) {
       return <div>Loading..</div>
     } else {
     return (
+      
       <div className="App">
       <Container>
         <Row className="row-eq-height">
@@ -46,7 +49,7 @@ class App extends Component {
             <img src="https://cdn.dribbble.com/users/324739/screenshots/1931921/landscape-loop-final.gif" alt=""></img>
           </Col>
           <Col>
-          <Current data={weatherData}/>
+          <Current data={weatherData} location={this.props.location}/>
           <Row>
             <Col>
             <Daily day={weatherData.daily.data[0]} />

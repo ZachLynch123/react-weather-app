@@ -3,7 +3,6 @@ import '../CSS/Current.css';
 import WeatherIcon from 'react-icons-weather';
 
 const current = (props) => {
-    console.log(props);
 
     const iconStyle = {
         fontSize: '5em',
@@ -13,7 +12,7 @@ const current = (props) => {
     return (
         <div className="current-container">
             <div>
-                <h1 className="City">Las Vegas</h1>
+                <h1 className="City">Currently</h1>
             </div>
             <div className="content">
                 <div class="degrees">
