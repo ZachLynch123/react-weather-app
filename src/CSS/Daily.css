@@ -1,4 +1,4 @@
-.daily-container {
+/* .daily-container {
     display: flex;
     flex-direction: row;
     max-width: 75%;
@@ -7,21 +7,23 @@
     align-items: center;
     justify-content: center;
   }
-
+*/
 .seven-day {
-  flex-direction: column;
-  max-width: 10%;
-  flex-shrink: inherit;
-  margin: auto auto;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 60px;
+  margin-top: 80px;
+  margin-left: -10px;
+}
+
+h1 {
+  font-size: 1em;
 }
 
 .wi {
   color: white;
   font-size: 2em;
 }
+ 
+
+
+
 
   

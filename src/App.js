@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import key from './key';
 import Current from './components/Current';
 import Daily from './components/Daily';
+import { Container, Col, Row } from 'reactstrap';
 
 
 class App extends Component { 
@@ -30,9 +31,8 @@ class App extends Component {
   }
 
 
-
   render() {
-
+    
     let { isLoaded, weatherData } = this.state;
 
     if (!isLoaded) {
@@ -40,19 +40,39 @@ class App extends Component {
     } else {
     return (
       <div className="App">
-      <div className="container">
-        {<Current data={weatherData}/>
-        /* try a div inside a li to display 7 day. passing daily weather data in a for loop where i  is the day? */}
-        <div className="daily-container">
+      <Container>
+        <Row className="row-eq-height">
+          <Col>
+            <img src="https://cdn.dribbble.com/users/324739/screenshots/1931921/landscape-loop-final.gif" alt=""></img>
+          </Col>
+          <Col>
+          <Current data={weatherData}/>
+          <Row>
+            <Col>
             <Daily day={weatherData.daily.data[0]} />
+            </Col>
+            <Col>
             <Daily day={weatherData.daily.data[1]} />
+            </Col>
+            <Col>
             <Daily day={weatherData.daily.data[2]} />
+            </Col>
+            <Col>
             <Daily day={weatherData.daily.data[3]} />
+            </Col>
+            <Col>
             <Daily day={weatherData.daily.data[4]} />
+            </Col>
+            <Col>
             <Daily day={weatherData.daily.data[5]} />
+            </Col>
+            <Col>
             <Daily day={weatherData.daily.data[6]} />
-            </div>
-      </div>
+            </Col>
+          </Row>
+          </Col>
+          </Row>
+      </Container>
       </div>
     );}
   }

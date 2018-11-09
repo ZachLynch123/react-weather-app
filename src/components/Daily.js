@@ -11,10 +11,10 @@ const daily = (props) => {
 
     return (
         <div className="seven-day">
-            <h1>{days[a.getDay()]}</h1>
+            <p className="h5">{days[a.getDay()]}</p>
             <WeatherIcon name="darksky" iconId={props.day.icon}  />
-            <h1>{Math.floor(props.day.apparentTemperatureHigh)}</h1>
-            <h1>{Math.floor(props.day.apparentTemperatureLow)}</h1>
+            <p className="h5">{Math.floor(props.day.apparentTemperatureHigh)}</p>
+            <p className="h5">{Math.floor(props.day.apparentTemperatureLow)}</p>
         </div>
     );
     
